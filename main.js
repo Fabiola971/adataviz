@@ -121,4 +121,8 @@ const createBox = async (data, container) =>{
     container.appendChild(article)
 }
 
-
+const displayBox = async (box, container)=>{
+    box.forEach( b =>{
+        createBox(b, container)
+    })
+}
