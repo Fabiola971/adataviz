@@ -48,10 +48,6 @@ const main = async () =>{
             const results = jsonResponse.results;
             console.log(results)
             return results
-            // results.forEach(res =>{
-            //         console.log(res.price_type, res.pmr);
-            //         return res
-            // })
         }else{
             throw new Error('Erreur SERVER:' + response.status);
         }
@@ -63,4 +59,15 @@ const main = async () =>{
 }
 main()
 
+
+const getData = async ()  =>{
+    const results = await main();
+    console.log(results)
+    displayBox(results, boxContainer)
+    results.forEach(res =>{
+        createBox(res, box )
+    })
+    
+}
+getData()
 
