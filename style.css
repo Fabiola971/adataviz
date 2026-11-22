@@ -44,10 +44,14 @@ ul{
 }
 
 /* SECTION BOX CONTAINER */
+main{
+    container-type: inline-size;
+}
+
 #box-container{
-    display: flex;
-   flex-direction: column;
-   gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .datas-container li{
@@ -58,28 +62,37 @@ ul{
     width: 100%;
     border: 4px solid #104b82;
     border-radius: 10px 20px;
-    height: 400px;
-    padding: 10px;
+    padding: 10px; 
+}
+
+.filter{
+    width: 100%;
+    border: 3px solid #104b82;
+}
+
+button{
+    
+}
+
+@container (min-width: 700px) {
+    #box-container {
+        grid-template-columns: 250px repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
+        grid-auto-flow: row;
+    }
+
+    .filter {
+        grid-column: 1;
+        grid-row: 1 / span 10;
+
 }
 
 
-
 @media (min-width:768px){
-
     header{
         display: flex;
         justify-content: center;
     }
-
-    #box-container{
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .box{
-        /* width: 50%; */
-    }
-
 }
 
 @media (min-width:1024px){
