@@ -11,7 +11,7 @@ const datas = document.querySelectorAll("#datas-container li");
 console.log(datas)
 // const span = document.querySelectorAll("#datas-container li span ")
 // console.log(span)
-const keySpans = ["Evenement: ", "Description: ", "Adresse: ", "Prix: ", "Accès: "]
+const keySpans = ["Evenement: ", "Description: ", "Adresse: ", "Prix: ", "Accès PMR: "]
 console.log(keySpans);
 
 
@@ -45,7 +45,6 @@ const getData = async ()  =>{
     results.forEach(res =>{
         createBox(res, box )
     })
-    
 }
 getData()
 
@@ -111,13 +110,14 @@ const displayBox = async (box, container)=>{
     console.log(box)
 }
 
+
 // const createItem = () =>{
 //     for (let index = 0; index < 2; index++) {
-//         let btn;
-//         btn[i] = document.createElement("button");
         
+//      let  btn = document.createElement("button");
+//     btn[index].appendChild(".filter")
 //     }
 //     console.log(btn)
-//     return btn
+     
 // }
 // createItem()
