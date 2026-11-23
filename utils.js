@@ -1,11 +1,13 @@
- const createItem = () =>{
-    for (let index = 0; index < 2; index++) {
-        let btn;
-        btn[i] = document.createElement("button");
-    
+ export const formatData = async () => {
+    const results = await main();
+    // Evenement, Description, Adresse, Prix, Accès PMR
+    return{
+        Evenement: results.title,
+        Description: results.lead_text,
+        Adresse: results.address_street + results.address_zipcode + results.address_city,
+        Prix: results.price_type,
+        AccèsPMR: results.pmr
     }
-    console.log(btn)
-    return btn
-}
-createItem()
+ }
 
+ 
